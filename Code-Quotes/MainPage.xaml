@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Code_Quotes.MainPage">
+
+    <Grid x:Name="background">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,1">
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="DarkBlue"/>
+                    <GradientStop Offset=".5" Color="DarkCyan"/>
+                    <GradientStop Offset="1" Color="LightBlue"/>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Margin="25" RowDefinitions=".8*,.2*">
+            <Label FontSize="50"
+                   FontFamily="dancingRegular"
+                   HorizontalTextAlignment="Center"
+                   Text=""
+                   x:Name="quote"
+                   TextColor="White"
+                   VerticalOptions="Center"/>
+            <Button Grid.Row="1"
+                    BackgroundColor="Black"
+                    Opacity=".6"
+                    Text="Get new Quote"
+                    x:Name="btnGenerateQuote"
+                    Clicked="btnGenerateQuote_Clicked"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
